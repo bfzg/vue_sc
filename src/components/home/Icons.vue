@@ -1,7 +1,7 @@
 <template>
   <ul class="icons">
     <li v-for="(item,index) in iconsList" :key="index">
-      <img :src="item.imgUrl" alt />
+      <img :src="item.imgUrl"/>
       <span>{{item.title}}</span>
     </li>
   </ul>
@@ -9,37 +9,9 @@
 
 <script>
 export default {
-  data() {
-    return {
-      iconsList: [
-        {
-          id: 1,
-          title: "自饮茶",
-          imgUrl: "./images/icons1.png"
-        },
-        {
-          id: 2,
-          title: "白茶",
-          imgUrl: "./images/icons1.png"
-        },
-        {
-          id: 3,
-          title: "红茶",
-          imgUrl: "./images/icons1.png"
-        },
-        {
-          id: 4,
-          title: "自饮茶",
-          imgUrl: "./images/icons1.png"
-        },
-        {
-          id: 5,
-          title: "自饮茶",
-          imgUrl: "./images/icons1.png"
-        }
-      ]
-    };
-  }
+ props:{
+   iconsList:Array
+ }
 };
 </script>
 

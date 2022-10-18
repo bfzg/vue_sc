@@ -4,14 +4,13 @@
       <span>爆款推荐</span>
     </div>
     <ul>
-      <li v-for="(item,index) in recList" :key="index">
+      <li v-for="(item,index) in recommendList" :key="index">
         <van-card
-          num="2"
+
           :price="item.price"
-          :desc="item.desc"
-          :title="item.title"
-          :thumb="item.thumb"
-          :tag="item.tag"
+          :desc="item.content"
+          :title="item.name"
+          :thumb="item.imgUrl"
         />
       </li>
     </ul>
@@ -20,47 +19,7 @@
 
 <script>
 export default {
-  data() {
-    return {
-      recList: [
-        {
-          price: "20",
-          desc: "红茶冲水会发红",
-          title: "红茶",
-          thumb: "./images/goods1.jpg",
-          tag: "特价"
-        },
-        {
-          price: "20",
-          desc: "红茶冲水会发红",
-          title: "红茶",
-          thumb: "./images/goods1.jpg",
-          tag: "特价"
-        },
-        {
-          price: "20",
-          desc: "红茶冲水会发红",
-          title: "红茶",
-          thumb: "./images/goods1.jpg",
-          tag: "特价"
-        },
-        {
-          price: "20",
-          desc: "红茶冲水会发红",
-          title: "红茶",
-          thumb: "./images/goods1.jpg",
-          tag: "特价"
-        },
-        {
-          price: "20",
-          desc: "红茶冲水会发红",
-          title: "红茶",
-          thumb: "./images/goods1.jpg",
-          tag: "特价"
-        }
-      ]
-    };
-  }
+ props:{recommendList:Array}
 };
 </script>
 
@@ -73,6 +32,9 @@ export default {
       .van-card {
         // border-bottom: 1px solid rgb(133, 133, 133);
         background-color: rgba(239, 239, 239,.9);
+		width: 90%;
+		margin: 0 auto;
+		border-radius: 10px;
       }
     }
   }

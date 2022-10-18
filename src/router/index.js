@@ -27,6 +27,23 @@ const routes = [{
 		path: '/my',
 		name: 'My',
 		component: () => import('../views/my.vue')
+	},
+	{
+		path:'/Search',
+		name:'Search',
+		children:[
+			{
+				path:'/',
+				name:'index',
+				component:() => import('../views/search/Srarch-index')
+			},
+			{
+				path:'/list',
+				name:'list',
+				component:() => import('../views/search/search-list')
+			}
+		],
+		component: () => import('../views/Search.vue')
 	}
 ]
 

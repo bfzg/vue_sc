@@ -69,7 +69,7 @@
 			li {
 				display: flex;
 				flex-direction: column;
-        align-items: center;
+				align-items: center;
 				img {
 					width: 0.826rem;
 					height: 0.826rem;

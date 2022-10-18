@@ -7,7 +7,7 @@
         </div>
       </el-col>
       <el-col :span="15">
-        <div class="grid-content bg-purple-light input">
+        <div class="grid-content bg-purple-light input" @click="goSearch">
           <el-input placeholder="请输入内容" prefix-icon="el-icon-search"></el-input>
         </div>
       </el-col>
@@ -22,7 +22,12 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  methods:{
+    goSearch(){
+      this.$router.push('/search');
+    }
+  }
 };
 </script>
 
@@ -38,6 +43,7 @@ export default {
   width: 100%;
   height: 65px;
   background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+
   .header_img {
     width: 65px;
   }

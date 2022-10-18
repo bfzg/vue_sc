@@ -9,7 +9,9 @@ import 'element-ui/lib/theme-chalk/index.css';
 //导入vant
 import Vant from 'vant';
 import 'vant/lib/index.css';
-
+//导入mintUI
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
 
 //引入全局样式
 import '@/assets/css/index.css'
@@ -23,6 +25,7 @@ Vue.use(less)
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 Vue.use(Vant);
+Vue.use(MintUI)
 
 new Vue({
   router,
